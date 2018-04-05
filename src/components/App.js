@@ -56,14 +56,14 @@ class App extends Component {
 		localStorage.setItem('order', JSON.stringify(this.state.order));
 	}
 
-    componentWillUnmount() {
+	componentWillUnmount() {
 		//base.removeBinding(this.ref);
 	}
 
 	render() {
 		return (
 			<div className="catch-of-the-day">
-                <StoreFront fishes={this.state.fishes} addToOrder={this.addToOrder} />
+				<StoreFront fishes={this.state.fishes} addToOrder={this.addToOrder} />
 
 				<Order removeFromOrder={this.removeFromOrder} fishes={this.state.fishes} order={this.state.order} />
 
